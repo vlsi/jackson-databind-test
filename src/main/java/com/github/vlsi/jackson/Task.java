@@ -1,6 +1,5 @@
 package com.github.vlsi.jackson;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -13,11 +12,11 @@ import java.math.BigInteger;
 @JsonIdentityInfo(generator=ObjectIdGenerators.UUIDGenerator.class, property="@id")
 public class Task {
     public String GPCode;
-    @JsonBackReference
+    @JsonManagedReference
     public Process process;
     @JsonManagedReference
     public Activity activity;
-    @JsonBackReference
+    @JsonManagedReference
     public Employee assignedTo;
     public BigInteger objectTypeId;
 }

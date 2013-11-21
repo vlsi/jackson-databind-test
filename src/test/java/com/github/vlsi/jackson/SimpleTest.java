@@ -17,17 +17,25 @@ public class SimpleTest {
     /* Prints the following:
 Serialized json is:
 [ "com.github.vlsi.jackson.Process", {
-  "@id" : "2b37b99c-6852-4b29-b6b8-ef078118a8f1",
+  "@id" : "51910b6e-4780-436f-9d19-68df0c4a2875",
   "tasks" : [ "java.util.ArrayList", [ [ "com.github.vlsi.jackson.Task", {
-    "@id" : "004e1e10-714d-40c9-bee1-c7eb3eafb882",
+    "@id" : "7a176d0a-1599-4dfc-abaa-b9042a1a9179",
     "GPCode" : "NC.TIME.OFF",
+    "process" : "51910b6e-4780-436f-9d19-68df0c4a2875",
     "activity" : [ "com.github.vlsi.jackson.Activity", {
-      "@id" : "b2ca3ef9-f4a9-490d-b28f-b872e4f411e2",
-      "priority" : 42
+      "@id" : "10152d97-93de-415f-b0dc-7857c25a2f05",
+      "priority" : 42,
+      "assignedEmployee" : [ "com.github.vlsi.jackson.Employee", {
+        "@id" : "d2fcf0a1-e7cb-4e50-bba2-8992df8074a9",
+        "name" : "employee 1",
+        "taskQueue" : [ "java.util.ArrayList", [ "7a176d0a-1599-4dfc-abaa-b9042a1a9179" ] ],
+        "currentActivity" : "10152d97-93de-415f-b0dc-7857c25a2f05"
+      } ]
     } ],
+    "assignedTo" : "d2fcf0a1-e7cb-4e50-bba2-8992df8074a9",
     "objectTypeId" : [ "java.math.BigInteger", 9876543210987654321 ]
-  } ], "004e1e10-714d-40c9-bee1-c7eb3eafb882" ] ],
-  "activities" : [ "java.util.ArrayList", [ "b2ca3ef9-f4a9-490d-b28f-b872e4f411e2", "b2ca3ef9-f4a9-490d-b28f-b872e4f411e2" ] ]
+  } ], "7a176d0a-1599-4dfc-abaa-b9042a1a9179" ] ],
+  "activities" : [ "java.util.ArrayList", [ "10152d97-93de-415f-b0dc-7857c25a2f05", "10152d97-93de-415f-b0dc-7857c25a2f05" ] ]
 } ]
      */
     @Test

@@ -1,6 +1,5 @@
 package com.github.vlsi.jackson;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -15,6 +14,6 @@ public class Employee {
     public String name;
     @JsonManagedReference
     public List<Task> taskQueue;
-    @JsonBackReference
+    @JsonManagedReference
     public Activity currentActivity;
 }
